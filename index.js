@@ -18,15 +18,13 @@ title.textContent = shoeInfo.name
 
 // comments is the UL
 const comments = document.querySelector("#comments")
-comments.textContent = shoeInfo.remarks.forEach( function (comment) {
+shoeInfo.remarks.forEach( function (comment) {
     const commentText = document.createElement("li")
-    commentText.textContent = comment
+    commentText.textContent = comment.comment
     comments.append(commentText) 
-    // console.log(comments.append(commentText)) 
-})
-
-
     
+})
+// I want to take the comment from each remark make an li (commentText), set it's textContent with the comment's string, and have that appended to the ul (#comments). In order to do that i need to iterate through each shoeInfo.remarks.
 
 
 
